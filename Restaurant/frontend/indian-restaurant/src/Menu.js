@@ -170,7 +170,14 @@ const Menu = () => {
                     </div>
                     <div className="modal-body menu-modal">
                         <div className="row">
-                            
+                        <div className="col-lg-5">
+                    <img 
+                        src={image} 
+                        alt={name} 
+                        className="img-fluid" 
+                        style={{ maxHeight: "280px",maxWidth:"300px", borderRadius: "10px", objectFit: "cover" }} 
+                    />
+                     </div>
                             <div className="col-lg-7">
                                 <h2>{name}</h2>
                                 <h6>{category}</h6>
