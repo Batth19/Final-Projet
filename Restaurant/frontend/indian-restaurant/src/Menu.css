@@ -1,0 +1,27 @@
+body{
+    display:block;
+}
+.menu-card{
+    transition: .4s;
+}
+.menu-card img{
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
+.menu-card:hover {
+    transform: scale(1.05);
+}
+.menu-modal img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 100%;
+}
+
+.cart-list img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.category-icon{
+    scale: 2.2;
+}

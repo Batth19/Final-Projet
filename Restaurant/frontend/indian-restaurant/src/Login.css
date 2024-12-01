@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+ /* Main container for login page  */
+.login-container {
+    display: flex;
+    flex-direction: row;
+    background-color:  #c0f3e0;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 1100px; 
+    height: 600px; 
+   
+}
+
+/* Styling the image container */
+.login-image {
+    flex: 2; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff;
+}
+
+.login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Styling the form container */
+.form-container {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    
+}
+
+h1 {
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    
+}
+
+/* Add margin between input fields */
+.input-group {
+    margin-bottom: 25px;
+    
+}
+
+/* Styling form labels */
+label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555555;
+    margin-bottom: 5px;
+    display: block;
+    
+}
+
+/* Styling the input fields */
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    color: #333333;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #80bdff;
+    outline: none;
+}
+
+/* Styling buttons  */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.button-margin {
+    margin: 10px 0; 
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling success and error messages */
+.message {
+    margin-top: 15px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    /* Styling for success message */
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    /* Styling for error message */
+}
+
+p {
+    margin-top: 20px;
+    font-size: 14px;
+    /* Styling for paragraph text */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    /* Style for anchor links */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Add underline on hover for links */
+}

@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Main container styles */
+.main-page .main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+/* Header styling */
+.main-page .header {
+    width: 100%;
+    background-color: #b4b7ea;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Header title */
+.main-page .header-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Header description text */
+.main-page .header-content p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Login button */
+.main-page .login-button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #2a9df4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.main-page .login-button:hover {
+    background-color: #007bff;
+}
+
+/* Main content area */
+.main-page .main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    background-color: #c0f3e0;
+}
+
+/* Style for Container for slideshow */
+.main-page .slideshow-container {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 40px;
+    height: 100%;
+}
+
+/* Slideshow image styling with border-radius and shadow */
+.main-page .slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.main-page .description {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 20px;
+}
+
+/* Large title for description */
+.main-page .description h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Text styling for the description paragraph */
+.main-page .description p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Footer area with background color and text alignment */
+.main-page .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.main-page .footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.main-page .footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 200px;
+}
+
+.main-page .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.main-page .footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.main-page .footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.main-page .footer-bottom p {
+    font-size: 12px;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .header-content h1 {
+        font-size: 40px;
+    }
+    
+    .main-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    
+    .slideshow-container,
+    .description {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .description h2 {
+        font-size: 30px;
+    }
+    
+    .description p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 32px;
+    }
+
+    .header-content p {
+        font-size: 18px;
+    }
+
+    .login-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+    
+    .description h2 {
+        font-size: 26px;
+    }
+    
+    .description p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 24px;
+    }
+
+    .header-content p {
+        font-size: 16px;
+    }
+
+    .login-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .description h2 {
+        font-size: 22px;
+    }
+
+    .description p {
+        font-size: 14px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
