@@ -50,7 +50,7 @@ const Login = ({ onLoginSuccess, onSwitchToRegister, onSwitchToForgotPassword, o
                     
                     <form onSubmit={handleSubmit}>
                         <div className="input-group">
-                            <label htmlFor="username">Username or Email</label>
+                            <label htmlFor="username">Username</label>
                             <input
                                 type="text"
                                 id="username"
