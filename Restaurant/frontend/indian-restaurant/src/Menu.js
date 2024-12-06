@@ -22,7 +22,8 @@ const Menu = () => {
 
     const [qty,setQty] = useState(1);
     const [spiceness,setSpiceness] = useState('Mild');
-
+    
+    const [showProfile, setShowProfile] = useState(false);
     const cartTotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
     
     useEffect(() => {
@@ -110,16 +111,24 @@ const Menu = () => {
                         <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                         </svg>
                     </a>
-                    <a className="navbar-brand" href="/">Indian Restaurant</a>
+                    <a className="navbar-brand" href="/">Log out</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         
-                        <li className="nav-item">
-                        <a className="nav-link active me-3" aria-current="page" href="#">Welcome,{login_user} </a>
-                        </li>
+                    <li className="nav-item">
+    <a 
+        className="nav-link active me-3" 
+        aria-current="page" 
+        href="#" 
+        onClick={() => setShowProfile(true)} 
+    >
+        Welcome, {login_user}
+    </a>
+</li>
+
                         <li className="nav-item">
                         <a className="nav-link text-white" href="#" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
                             <span>Cart </span>
@@ -158,6 +167,27 @@ const Menu = () => {
                    
                 </div>
             </div>
+            {showProfile && (
+    <div className="modal show d-block" tabIndex="-1">
+        <div className="modal-dialog">
+            <div className="modal-content">
+                <div className="modal-header">
+                    <h5 className="modal-title">User Profile</h5>
+                    <button type="button" className="btn-close" onClick={() => setShowProfile(false)}></button>
+                </div>
+                <div className="modal-body">
+                    <p><strong>Username:</strong> {login_user}</p>
+                </div>
+                <div className="modal-footer">
+                    <button type="button" className="btn btn-secondary" onClick={() => setShowProfile(false)}>
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+)}
+
 
 
 
@@ -265,6 +295,29 @@ const Menu = () => {
                 
             </div>
             </div>
+            {showProfile && (
+                <div className="modal show d-block" tabIndex="-1">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h5 className="modal-title">User Profile</h5>
+                                <button type="button" className="btn-close" onClick={() => setShowProfile(false)}></button>
+                            </div>
+                            <div className="modal-body">
+                                <p><strong>Username:</strong> {login_user}</p>
+                               
+                                
+                               
+                            </div>
+                            <div className="modal-footer">
+                                <button type="button" className="btn btn-secondary" onClick={() => setShowProfile(false)}>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
 
 
     
